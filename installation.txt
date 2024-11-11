@@ -1,0 +1,20 @@
+1. Python download and install
+
+2. Open CMD
+
+3. python --version
+
+4. pip --version
+
+5. pip install jupyter
+
+6. jupyter --version
+
+7. Create Folder and open CMD in Folder and run Below Command
+
+8. jupyter notebook
+
+-----------------------------------------------------------------------------
+
+An IPYNB file is a text-based file that stores the contents of a Jupyter Notebook session. 
+IPYNB stands for "Interactive Python Notebook".
