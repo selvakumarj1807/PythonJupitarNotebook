@@ -1,0 +1,52 @@
+Excel in Data Analytics
+-----------------------
+
+Microsoft Microsoft Excel is one of the most widely used tools in Data Analytics for 
+data cleaning, analysis, visualization, reporting, and dashboard creation.
+
+1. Data Cleaning
+----------------
+    1. Remove duplicates
+    2. Handle missing values
+    3. Text to Columns
+    4. Flash Fill
+    5. Sorting & Filtering
+
+2. Data Analysis
+----------------
+Formulas and Functions
+----------------------
+    1. SUM()
+    2. AVERAGE()
+    3. COUNTIF()
+    4. VLOOKUP()
+    5. XLOOKUP()
+    6. IF()
+    7. INDEX MATCH
+
+3. Pivot Tables
+---------------
+Used for:
+---------
+    1. Summarizing large datasets
+    2. Grouping data
+    3. Creating reports quickly
+
+4. Data Visualization
+---------------------
+Create charts like:
+-------------------
+    1. Bar Chart
+    2. Line Chart
+    3. Pie Chart
+    4. Histogram
+    5. Scatter Plot
+
+5. Dashboards
+-------------
+Interactive dashboards using:
+----------------------------
+    1. Pivot Charts
+    2. Slicers
+    3. Conditional Formatting
+

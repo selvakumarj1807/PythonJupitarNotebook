@@ -1,0 +1,39 @@
+1. Select Single Row & Column:
+------------------------------
+
+Ctrl + Shift + RightArrow & Ctrl + Shift + DownArrow
+
+2. Select All of the Data:
+--------------------------
+
+Ctrl + A (or) Ctrl + hift + 8
+
+3. Apply Filter:
+----------------
+
+Ctrl + a --> Select Sort & Filter Option in Top of the Ribben --> Apply Filter Option
+
+4. To Find the Sum for Salary Column 
+------------------------------------
+
+Ctrl + Shift + DownArrow --> Select Sum Opption from the Top of the Ribben
+
+or
+
+go to the last cell of the Row and click (Alt + equalto(=)) to get =SUM(E2:E58). Then Click the Enter
+
+Explanation
+-----------
+The SUM() function in Excel is used to add numbers.
+
+| Part     | Meaning                       |
+| -------- | ----------------------------- |
+| `SUM`    | Excel function for addition   |
+| `G2:G58` | Range of cells from G2 to G58 |
+| `:`      | Means "to" between cells      |
+
+5. Count of the Value:
+----------------------
+go to the last cell of the Row and write below function
+
+=countif(c2:c58, "Male")
