@@ -1,0 +1,72 @@
+04 Lowest, highest and top 5 salary values
+------------------------------------------
+
+To finds the smallest salary
+----------------------------
+
+=MIN(staff[Salary])
+
+This formula finds the smallest salary from the Salary column in the staff table.
+
+To finds the largest salary
+----------------------------
+
+=Max(staff[Salary])
+
+This formula finds the largest salary from the Salary column in the staff table.
+
+1st,2nd,3rd, 4th, 5th largest salary
+------------------------------------
+
+=LARGE(staff[Salary],1)
+=LARGE(staff[Salary],2)
+=LARGE(staff[Salary],3)
+=LARGE(staff[Salary],4)
+=LARGE(staff[Salary],5)
+
+This formula finds the 1 - 5 largest salary from the Salary column in the staff table.
+
+SORT() - Only for latest Version
+--------------------------------
+
+=TAKE(SORT(staff[Salary],,-1),5)
+
+This formula returns the Top 5 highest salaries from the Salary column.
+
+It uses two functions together:
+
+1. SORT() → Sort salaries
+2. TAKE() → Take first 5 values
+
+Syntax:
+
+=SORT(array,[sort_index],[sort_order])
+
+| Argument     | Meaning                        |
+| ------------ | ------------------------------ |
+| `array`      | Data to sort                   |
+| `sort_index` | Column number                  |
+| `sort_order` | 1 = Ascending, -1 = Descending |
+
+Here:
+-----
+SORT(staff[Salary],,-1)
+
+| Part            | Meaning          |
+| --------------- | ---------------- |
+| `staff[Salary]` | Salary data      |
+| blank           | Default column   |
+| `-1`            | Descending order |
+
+
+=LARGE(FILTER(staff[Salary],staff[Gender]="Male"),1)
+=LARGE(FILTER(staff[Salary],staff[Gender]="Male"),2)
+=LARGE(FILTER(staff[Salary],staff[Gender]="Male"),3)
+=LARGE(FILTER(staff[Salary],staff[Gender]="Male"),4)
+=LARGE(FILTER(staff[Salary],staff[Gender]="Male"),5)
+
+=LARGE(FILTER(staff[Salary],staff[Gender]="Female"),1)
+=LARGE(FILTER(staff[Salary],staff[Gender]="Female"),2)
+=LARGE(FILTER(staff[Salary],staff[Gender]="Female"),3)
+=LARGE(FILTER(staff[Salary],staff[Gender]="Female"),4)
+=LARGE(FILTER(staff[Salary],staff[Gender]="Female"),5)

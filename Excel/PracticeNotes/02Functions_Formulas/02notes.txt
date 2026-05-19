@@ -1,0 +1,89 @@
+Excel Formulas & Functions:
+---------------------------
+------
+FILTER
+------
+
+Syntax
+------
+
+FILTER(array, include, [if_empty])
+
+| Argument     | Meaning                       |
+| ------------ | ----------------------------- |
+| `array`      | Data to return                |
+| `include`    | Condition to check            |
+| `[if_empty]` | Optional message if no result |
+
+
+To Find All employees with > 100k Salary. Write the Formula in another sheet
+
+=FILTER(staff, staff[Salary]>100000)
+------------------------------------
+
+This formula is used to:
+
+Show only employees whose salary is greater than 100000. and Check All Column Types (Date, number(salary))
+If Have Change then change the Column Types.
+
+Add headers
+-----------
+
+What is #Headers?
+-----------------
+#Headers is a Structured Reference Specifier in Excel Tables.
+
+It tells Excel:
+---------------
+“Give me only the header row of this table.”
+
+=staff[#Headers]
+
+Another Example Multiple Conditions
+-----------------------------------
+
+AND Condition
+-------------
+=FILTER(staff,(staff[Salary]>100000)*(staff[Department]="IT"))
+
+Meaning:
+--------
+Salary > 100000
+AND
+Department = IT
+
+OR Condition
+------------
+=FILTER(staff,(staff[Department]="HR")+(staff[Department]="IT"))
+
+Meaning:
+--------
+Department is HR
+OR
+Department is IT
+
+selected columns
+----------------
+
+Formula
+-------
+=CHOOSECOLS(FILTER(staff,staff[Salary]>C58),1,2,3,5,6)
+
+or
+
+=FILTER(staff[[Emp ID]:[Salary]], (staff[Salary]>100000)*(staff[Gender]="Female"))
+
+This formula means:
+-------------------
+Filter employees whose salary is greater than the value in C58, then display only selected columns.
+
+selected header names (column titles)
+-------------------------------------
+
+Formula
+-------
+=CHOOSECOLS(staff[#Headers],1,2,3,5,6)
+
+This formula means:
+-------------------
+Return only selected header names (column titles) from the staff table.

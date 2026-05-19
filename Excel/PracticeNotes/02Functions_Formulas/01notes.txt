@@ -1,0 +1,99 @@
+Excel Formulas & Functions:
+---------------------------
+
+01. COUNTIFS, SUMIFS:
+---------------------
+
+Create Columns in Another Sheet 
+Department, Headcount, Total Salary
+
+Copy department column Values from Data sheet and paste into another Sheet 
+
+Select Department Column Values from another Sheet + Select Data Ribben and Remove Douplicates
+
+
+COUNTIFS
+--------
+=COUNTIFS(staff[Department],B3:B14)
+-----------------------------------
+
+Select first cell from another sheet Headcount column + write =COUNTIFS(staff[Department],B3:B14)
+
+This formula is used to count values based on conditions.
+
+But this formula has a problem because COUNTIFS expects:
+
+Syntax:
+-------
+
+COUNTIFS(criteria_range, criteria)
+
+| Part                | Meaning             |
+| ------------------- | ------------------- |
+| `COUNTIFS`          | Count matching rows |
+| `staff[Department]` | Department column   |
+| `B3:B14`            | Conditions to check |
+
+SUMIFS
+------
+
+=SUMIFS(staff[Salary],staff[Department],B3:B14)
+-----------------------------------------------
+
+Select first cell from another sheet | Total Salary | column + write =SUMIFS(staff[Salary],staff[Department],B3:B14)
+
+
+This formula adds salaries based on department conditions.
+
+But here, B3:B14 is a range of conditions, so in newer Excel versions it may return multiple results 
+(dynamic array output).
+
+Syntax:
+-------
+
+=SUMIFS(sum_range, criteria_range1, criteria1)
+
+| Part              | Meaning        |
+| ----------------- | -------------- |
+| `sum_range`       | Values to add  |
+| `criteria_range1` | Range to check |
+| `criteria1`       | Condition      |
+
+| Part                | Meaning                        |
+| ------------------- | ------------------------------ |
+| `SUMIFS`            | Add values based on conditions |
+| `staff[Salary]`     | Values to add                  |
+| `staff[Department]` | Check this column              |
+| `B3:B14`            | Department conditions          |
+
+AVERAGEIFS:
+-----------
+
+=AVERAGEIFS(staff[Salary],staff[Department],B3:B14)
+---------------------------------------------------
+
+Select first cell from another sheet | Average Salary | column + write =AVERAGEIFS(staff[Salary],staff[Department],B3:B14)
+
+This formula calculates the average salary based on department conditions.
+
+Since B3:B14 is a range, newer Excel versions may return multiple average results 
+(Dynamic Array output).
+
+Syntax:
+-------
+
+=AVERAGEIFS(average_range, criteria_range1, criteria1)
+
+| Part              | Meaning           |
+| ----------------- | ----------------- |
+| `average_range`   | Values to average |
+| `criteria_range1` | Range to check    |
+| `criteria1`       | Condition         |
+
+| Part                | Meaning                          |
+| ------------------- | -------------------------------- |
+| `AVERAGEIFS`        | Find average based on conditions |
+| `staff[Salary]`     | Values to average                |
+| `staff[Department]` | Check this column                |
+| `B3:B14`            | Department conditions            |
+
