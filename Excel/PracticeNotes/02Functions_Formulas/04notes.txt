@@ -1,0 +1,153 @@
+04 Lowest, highest and top 5 salary values
+------------------------------------------
+
+To finds the smallest salary
+----------------------------
+
+=MIN(staff[Salary])
+
+This formula finds the smallest salary from the Salary column in the staff table.
+
+To finds the largest salary
+----------------------------
+
+=Max(staff[Salary])
+
+This formula finds the largest salary from the Salary column in the staff table.
+
+1st,2nd,3rd, 4th, 5th largest salary
+------------------------------------
+
+=LARGE(staff[Salary],1)
+=LARGE(staff[Salary],2)
+=LARGE(staff[Salary],3)
+=LARGE(staff[Salary],4)
+=LARGE(staff[Salary],5)
+
+or 
+
+=LARGE(staff[Salary],H6)
+------------------------
+
+H6:H10 - Give Refernces values 1 to 5 
+
+This formula finds the 1 - 5 largest salary from the Salary column in the staff table.
+
+SORT() - Only for latest Version
+--------------------------------
+
+=TAKE(SORT(staff[Salary],,-1),5)
+
+This formula returns the Top 5 highest salaries from the Salary column.
+
+It uses two functions together:
+
+1. SORT() → Sort salaries
+2. TAKE() → Take first 5 values
+
+Syntax:
+
+=SORT(array,[sort_index],[sort_order])
+
+| Argument     | Meaning                        |
+| ------------ | ------------------------------ |
+| `array`      | Data to sort                   |
+| `sort_index` | Column number                  |
+| `sort_order` | 1 = Ascending, -1 = Descending |
+
+Here:
+-----
+SORT(staff[Salary],,-1)
+
+| Part            | Meaning          |
+| --------------- | ---------------- |
+| `staff[Salary]` | Salary data      |
+| blank           | Default column   |
+| `-1`            | Descending order |
+
+To finds the minimum salary for employees whose Gender = Male.
+--------------------------------------------------------------
+
+=MINIFS(staff[Salary],staff[Gender],E$3)
+
+Syntax
+------
+
+MINIFS(min_range, criteria_range1, criteria1)
+
+| Part              | Meaning                           |
+| ----------------- | --------------------------------- |
+| `min_range`       | Values to check for minimum       |
+| `criteria_range1` | Column where condition is checked |
+| `criteria1`       | Condition                         |
+
+| Part            | Meaning                                          |
+| --------------- | ------------------------------------------------ |
+| `MINIFS`        | Finds the minimum value based on condition(s)    |
+| `staff[Salary]` | Range from which Excel finds the smallest salary |
+| `staff[Gender]` | Column where Excel checks the condition          |
+| `E$3`           | Cell - Condition value (`Male`)                         |
+| `staff`         | Excel Table name                                 |
+| `[Salary]`      | Salary column inside the table                   |
+| `[Gender]`      | Gender column inside the table                   |
+| `$` in `E$3`    | Locks row 3 while copying formula                |
+
+
+=MINIFS(staff[Salary],staff[Gender],F$3)
+----------------------------------------
+
+This Fomulas finds the minimum salary for employees whose Gender = Female.
+
+=MAXIFS(staff[Salary],staff[Gender],E$3)
+----------------------------------------
+
+This Fomulas finds the Maximum salary for employees whose Gender = Male.
+
+=MAXIFS(staff[Salary],staff[Gender],F$3)
+----------------------------------------
+
+This Fomulas finds the Maximum salary for employees whose Gender = Female.
+
+The largest salary for Male & Female employees.
+--------------------------------------
+
+=LARGE(FILTER(staff[Salary],staff[Gender]="Male"),1)
+=LARGE(FILTER(staff[Salary],staff[Gender]="Male"),2)
+=LARGE(FILTER(staff[Salary],staff[Gender]="Male"),3)
+=LARGE(FILTER(staff[Salary],staff[Gender]="Male"),4)
+=LARGE(FILTER(staff[Salary],staff[Gender]="Male"),5)
+
+=LARGE(FILTER(staff[Salary],staff[Gender]="Female"),1)
+=LARGE(FILTER(staff[Salary],staff[Gender]="Female"),2)
+=LARGE(FILTER(staff[Salary],staff[Gender]="Female"),3)
+=LARGE(FILTER(staff[Salary],staff[Gender]="Female"),4)
+=LARGE(FILTER(staff[Salary],staff[Gender]="Female"),5)
+
+or 
+
+The largest salary for Male employees.
+--------------------------------------
+
+=LARGE(FILTER(staff[Salary],staff[Gender]=E$3),H6)
+
+| Part            | Meaning                   |
+| --------------- | ------------------------- |
+| `LARGE`         | Returns nth largest value |
+| `FILTER`        | Filters matching data     |
+| `staff[Salary]` | Salary column             |
+| `staff[Gender]` | Gender column             |
+| `E$3`           | Condition value (`Male`)  |
+| `H6`            | Rank number               |
+| `1`             | Largest salary  (Refernces Number)  |
+
+The largest salary for Female employees.
+--------------------------------------
+
+=LARGE(FILTER(staff[Salary],staff[Gender]=F$3),H6)
+
+The largest salary for Male & Female employees using Sort + Take.
+-----------------------------------------------------------------
+
+=TAKE(SORT((FILTER(staff[Salary],staff[Gender]=E$3)),,-1),H12)
+
+=TAKE(SORT((FILTER(staff[Salary],staff[Gender]=F$3)),,-1),H12)

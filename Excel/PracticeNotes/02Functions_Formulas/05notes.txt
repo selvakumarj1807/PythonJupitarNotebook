@@ -1,0 +1,21 @@
+UNIQUE, COUNTA, #
+-----------------
+
+Formula
+-------
+
+=SORT(UNIQUE(staff[Department]))
+
+This formula:
+-------------
+Returns all unique department names in alphabetical order.
+
+Formula
+-------
+
+=COUNTA(B4#)
+
+This formula:
+-------------
+
+Counts how many non-empty cells are in the spilled range starting from B4.
