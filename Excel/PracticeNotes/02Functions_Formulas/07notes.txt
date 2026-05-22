@@ -1,0 +1,49 @@
+XLOOKUP
+-------
+
+XLOOKUP is a modern Excel function used to search for a value in a range 
+and return a corresponding result. 
+It replaces older functions like VLOOKUP, HLOOKUP, and LOOKUP.
+
+Syntax
+------
+
+XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])
+
+| Argument         | Meaning                  | Required / Optional | Simple Explanation                 | Example              |
+| ---------------- | ------------------------ | ------------------- | ---------------------------------- | -------------------- |
+| `lookup_value`   | Value to search          | ✅ Required          | What you want to find              | `102`                |
+| `lookup_array`   | Where to search          | ✅ Required          | Column/row containing search value | `A2:A10`             |
+| `return_array`   | Value to return          | ✅ Required          | Column/row from which result comes | `B2:B10`             |
+| `[if_not_found]` | Message if value missing | ❌ Optional          | Shows custom text instead of error | `"Not Found"`        |
+| `[match_mode]`   | Type of matching         | ❌ Optional          | Exact or approximate match         | `0`, `-1`, `1`, `2`  |
+| `[search_mode]`  | Search direction         | ❌ Optional          | Top-to-bottom or reverse search    | `1`, `-1`, `2`, `-2` |
+
+=XLOOKUP(C4,staff[Emp ID],staff[First Name],"Not Found") - Get by id
+--------------------------------------------------------
+
+| Part                | Meaning      | Explanation                    |
+| ------------------- | ------------ | ------------------------------ |
+| `C4`                | lookup_value | Value to search                |
+| `staff[Emp ID]`     | lookup_array | Column where Excel searches    |
+| `staff[First Name]` | return_array | Column from which result comes |
+| `"Not Found"`       | if_not_found | Shows message if value missing |
+
+
+=XLOOKUP(C14,staff[Last Name],staff[Emp ID],"Not Found") - Get by last name
+--------------------------------------------------------
+
+Get Entire Data - Horizontally
+------------------------------
+
+=XLOOKUP(C14,staff[Last Name],staff,"Not Found")
+
+Get Entire Data - Vertically
+------------------------------
+
+=TRANSPOSE(XLOOKUP(C14,staff[Last Name],staff,"Not Found"))
+
+Get Entire Data get by last name
+--------------------------------
+
+=FILTER(staff, staff[Last Name]=C14)

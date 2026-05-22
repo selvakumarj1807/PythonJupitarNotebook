@@ -1,0 +1,38 @@
+VLOOKUP in Excel
+----------------
+
+VLOOKUP means Vertical Lookup.
+
+It is used to search for a value in the 
+first column of a table and return a value from another column in the same row.
+
+Syntax
+------
+
+=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])
+
+| Parameter        | Meaning                                       |
+| ---------------- | --------------------------------------------- |
+| `lookup_value`   | Value you want to search                      |
+| `table_array`    | Table range containing data                   |
+| `col_index_num`  | Column number to return result from           |
+| `[range_lookup]` | TRUE = Approximate Match, FALSE = Exact Match |
+
+Our Task:
+---------
+
+=VLOOKUP(C4,staff,2,FALSE)
+
+=VLOOKUP($C$4,staff,A6,FALSE) -(Use Locks($C$4) and Refernces columns(A6 - 2,3,5,6))
+
+Add Error Handling
+------------------
+
+=IFERROR(VLOOKUP($C$4,staff,A6,FALSE),"Not Found")
+
+INDEX + MATCH
+-------------
+
+=MATCH(C17,staff[Last Name],0) -(To Find Index Value)
+
+=INDEX(staff[Emp ID],MATCH(C17,staff[Last Name],0)) - (To Find Emp ID Column Value)
