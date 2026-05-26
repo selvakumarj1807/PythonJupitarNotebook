@@ -1,0 +1,34 @@
+Complex formula: Highest salary person
+--------------------------------------
+
+=MAX(staff[Salary])
+-------------------
+
+This formula is used to find the highest salary from the Salary column in the Excel table named staff.
+
+=XLOOKUP(MAX(staff[Salary]), staff[Salary], staff[First Name]&" "&staff[Last Name])
+-----------------------------------------------------------------------------------
+
+This formula is used to find the employee name who has the highest salary.
+
+=FILTER(staff, staff[Salary]=MAX(staff[Salary]))
+------------------------------------------------
+
+This returns all employees having the highest salary.
+
+=FILTER(staff[First Name]&" "&staff[Last Name], staff[Salary]=MAX(staff[Salary]))
+---------------------------------------------------------------------------------
+
+This formula is used to:
+------------------------
+Return the employee name(s) who have the highest salary.
+
+Unlike XLOOKUP, this formula can return multiple employees if more than one person has the 
+same maximum salary.
+
+=TEXTJOIN(",",,FILTER(staff[First Name]&" "&staff[Last Name], staff[Salary]=MAX(staff[Salary])))
+------------------------------------------------------------------------------------------------
+
+This formula is used to:
+------------------------
+Combine all employee names having the highest salary into a single cell.
