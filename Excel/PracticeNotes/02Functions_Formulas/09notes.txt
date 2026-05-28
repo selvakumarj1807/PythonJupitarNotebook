@@ -1,0 +1,11 @@
+=FILTER(staff, LEFT(staff[First Name],1)="H")
+
+=FILTER(staff,staff[Start Date]>=DATE(2021,1,1))
+
+=FILTER(staff,MONTH(staff[Start Date])=3)
+
+=FILTER(staff[[Emp ID]:[Last Name]],MONTH(staff[Start Date])=3)
+
+=FILTER(CHOOSECOLS(staff,1,2,8),MONTH(staff[Start Date])=3)
+
+=CHOOSECOLS(staff[#Headers],1,2,8)

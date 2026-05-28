@@ -1,0 +1,67 @@
+=COUNTA(staff[Emp ID])
+
+=AVERAGE(staff[Salary])
+
+=MAX(staff[Salary])
+
+----------------------------------------------
+
+=SORT(UNIQUE(staff[Department]))
+
+=COUNTIFS(staff[Department],B7#)
+
+=AVERAGEIFS(staff[Salary],staff[Department],B7#)
+
+=D7#-D4
+
+=MAXIFS(staff[Salary],staff[Department],B7#)
+
+=MAP(B7#,LAMBDA(x,MEDIAN(FILTER(staff[Salary],staff[Department]=x))))
+---------------------------------------------------------------------
+
+| Step | Formula Part                                 | Purpose                                   | Result           |
+| ---- | -------------------------------------------- | ----------------------------------------- | ---------------- |
+| 1    | `B7#`                                        | Takes all spilled department names        | IT, HR, Sales    |
+| 2    | `MAP(...)`                                   | Loops through each department one by one  | Iteration starts |
+| 3    | `LAMBDA(x,...)`                              | Creates a temporary variable `x`          | `x = IT`         |
+| 4    | `staff[Department]=x`                        | Checks matching department rows           | TRUE/FALSE array |
+| 5    | `FILTER(staff[Salary], staff[Department]=x)` | Returns salaries for that department only | IT salaries      |
+| 6    | `MEDIAN(...)`                                | Finds middle salary value                 | Median IT salary |
+| 7    | `MAP` continues                              | Repeats same process for HR, Sales        | Multiple results |
+| 8    | Final Output                                 | Returns all median salaries dynamically   | Spill results    |
+
+Difference Between MEDIAN and AVERAGE in Excel
+----------------------------------------------
+| Feature                    | MEDIAN                         | AVERAGE               |
+| -------------------------- | ------------------------------ | --------------------- |
+| Meaning                    | Middle value in sorted numbers | Sum of values ÷ Count |
+| Excel Function             | `=MEDIAN(A1:A10)`               | `=AVERAGE(A1:A10)`     | =MEDIAN(range) | =AVERAGE(range)
+| Affected by Extreme Values | ❌ No                           | ✅ Yes                 |
+| Best Used For              | Salaries, income, skewed data  | Normal balanced data  |
+| Calculation Type           | Positional                     | Mathematical mean     |
+
+Median
+------
+
+10000, 12000, 15000, 18000, 100000 
+
+Result is 15000
+
+If have 
+-------
+
+10000, 12000, 18000, 100000 
+
+Result is (12000 + 18000) / 2
+
+
+=COUNTIFS(staff[Department],B7#,staff[Gender],"Female")
+-------------------------------------------------------
+
+| Step | Formula Part        | Purpose                             | Result           |
+| ---- | ------------------- | ----------------------------------- | ---------------- |
+| 1    | `staff[Department]` | Department column to check          | IT, HR, Sales... |
+| 2    | `B7#`               | Dynamic spilled department list     | IT, HR, Sales    |
+| 3    | `staff[Gender]`     | Gender column to check              | Male/Female      |
+| 4    | `"Female"`          | Condition for gender                | Only Female rows |
+| 5    | `COUNTIFS()`        | Counts rows matching all conditions | Returns counts   |
