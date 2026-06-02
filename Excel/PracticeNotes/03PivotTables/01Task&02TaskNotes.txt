@@ -1,0 +1,81 @@
+Task 01:
+--------
+
+How many calls we are getting by customer?
+------------------------------------------
+
+Step 1: Select Your Data
+------------------------
+    Conver Table Format
+
+Step 2: Insert Pivot Table
+--------------------------
+    1. Select the full dataset
+    2. Go to Insert
+    3. Click PivotTable
+    4. Click OK
+
+Step 3: Add Row Field
+---------------------
+Drag:
+-----
+    Customer ID → into Rows
+
+Now each customer appears once.
+
+Step 4: Create COUNT Automatically
+----------------------------------
+Drag:
+-----
+    Call number → into Values
+
+Excel automatically detects it and usually shows:
+-------------------------------------------------
+    1. Count of Call number
+
+Because Call number is treated as text/ID.
+
+Task 02:
+--------
+
+How satisfied are our customers?
+--------------------------------
+
+Step 1: Create AVERAGE Automatically
+------------------------------------
+Drag:
+-----
+    Satisfaction Rating → into Values
+
+Excel automatically calculates:
+-------------------------------
+    1. Average / Sum of Satisfaction Rating
+
+Why Excel Automatically Chooses Count or Average?
+-------------------------------------------------
+Excel Logic
+-----------
+
+| Data Type       | Default Calculation |
+| --------------- | ------------------- |
+| Text / IDs      | Count               |
+| Numbers         | Sum                 |
+| Decimal Ratings | Average/Sum         |
+
+If Excel Shows Wrong Calculation
+--------------------------------
+Example:
+--------
+If Satisfaction Rating shows Sum instead of Average:
+----------------------------------------------------
+Change it manually
+------------------
+
+    1. Click dropdown beside field in Values
+    2. Choose:
+    -------
+        Value Field Settings
+    3. Select:
+    -------
+        Average
+    4. Click OK

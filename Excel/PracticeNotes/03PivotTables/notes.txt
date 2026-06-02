@@ -1,0 +1,137 @@
+Excel Pivot Tables
+------------------
+A Pivot Table in Microsoft Excel is a powerful tool used to:
+-----------------------------------------------------------
+    1. Summarize
+    2. Analyze
+    3. Group
+    4. Filter
+    5. Calculate
+large amounts of data quickly.
+
+It helps convert raw data into meaningful reports without writing complex formulas.
+
+Imagine you have employee salary data:
+--------------------------------------
+
+| Emp ID | Name    | Department | Gender | Salary | City       |
+| ------ | ------- | ---------- | ------ | ------ | ---------- |
+| 101    | Arun    | IT         | Male   | 50000  | Chennai    |
+| 102    | Priya   | HR         | Female | 45000  | Madurai    |
+| 103    | Karthik | IT         | Male   | 60000  | Chennai    |
+| 104    | Divya   | HR         | Female | 48000  | Coimbatore |
+| 105    | Ravi    | Sales      | Male   | 55000  | Chennai    |
+
+
+Now you want answers like:
+--------------------------
+    1. Total salary department-wise
+    2. Employee count by city
+    3. Average salary by gender
+    4. Highest salary by department
+
+Instead of formulas like SUMIFS, COUNTIFS, AVERAGEIFS, etc., Pivot Tables do this instantly.
+
+Why is it called “Pivot” Table?
+-------------------------------
+Because you can rotate (pivot) the data dynamically.
+
+Example:
+--------
+    1. View salary by department
+    2. Then switch to city-wise
+    3. Then gender-wise
+
+without changing the original data.
+
+Example 1 — Department Wise Total Salary
+----------------------------------------
+
+| Department | Sum of Salary |
+| ---------- | ------------- |
+| HR         | 93000         |
+| IT         | 110000        |
+| Sales      | 55000         |
+
+
+Example 2 — Employee Count by Department
+----------------------------------------
+
+| Department | Count of Employees |
+| ---------- | ------------------ |
+| HR         | 2                  |
+| IT         | 2                  |
+| Sales      | 1                  |
+
+
+Example 3 — Average Salary by Gender
+------------------------------------
+
+| Gender | Average Salary |
+| ------ | -------------- |
+| Female | 46500          |
+| Male   | 55000          |
+
+
+Pivot Table Areas
+-----------------
+
+After creating, Excel shows 4 sections:
+---------------------------------------
+
+| Area    | Purpose                        |
+| ------- | ------------------------------ |
+| Filters | Global filter                  |
+| Columns | Show data horizontally         |
+| Rows    | Show data vertically           |
+| Values  | Calculations (Sum, Count, Avg) |
+
+Common Calculations in Pivot Table
+----------------------------------
+
+| Calculation    | Purpose           |
+| -------------- | ----------------- |
+| Sum            | Total             |
+| Count          | Number of records |
+| Average        | Mean value        |
+| Max            | Highest value     |
+| Min            | Lowest value      |
+| Product        | Multiplication    |
+| Distinct Count | Unique values     |
+
+Sorting in Pivot Table
+----------------------
+You can sort:
+-------------
+    1. Largest to Smallest
+    2. Smallest to Largest
+    3. A-Z
+    4. Z-A
+
+Filtering in Pivot Table
+------------------------
+You can filter by:
+------------------
+    1. Department
+    2. City
+    3. Gender
+    4. Date
+
+Grouping in Pivot Table
+-----------------------
+Useful for:
+-----------
+    1. Dates → Month/Year
+    2. Salary ranges
+    3. Age groups
+
+Pivot Table vs Normal Formula
+-----------------------------
+
+| Pivot Table         | Formula               |
+| ------------------- | --------------------- |
+| Faster              | Slower for large data |
+| Dynamic             | Manual                |
+| Drag & Drop         | Need formulas         |
+| Easy reporting      | Complex formulas      |
+| Best for dashboards | Best for custom logic |

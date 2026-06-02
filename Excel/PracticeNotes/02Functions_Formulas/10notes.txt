@@ -65,3 +65,19 @@ Result is (12000 + 18000) / 2
 | 3    | `staff[Gender]`     | Gender column to check              | Male/Female      |
 | 4    | `"Female"`          | Condition for gender                | Only Female rows |
 | 5    | `COUNTIFS()`        | Counts rows matching all conditions | Returns counts   |
+
+
+=SORT(FILTER(staff, staff[Department]="Accounting"),6,1)
+
+=SUM(H7:H18)
+
+=COUNTIF(F23:F48, "Accounting")
+
+=COUNT(G23:G48)
+
+=COUNTA(B7:B18)
+
+| Function | Purpose                    | Counts What?                     | Ignores           |
+| -------- | -------------------------- | -------------------------------- | ----------------- |
+| `COUNT`  | Counts numeric values only | Numbers, dates, percentages      | Text, empty cells |
+| `COUNTA` | Counts all non-empty cells | Numbers, text, symbols, formulas | Only empty cells  |
