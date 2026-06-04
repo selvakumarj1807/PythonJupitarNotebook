@@ -1,0 +1,96 @@
+Task 06
+-------
+How busy is our call centre in 2023?
+------------------------------------
+
+Step 1: Select the Data
+-------
+    Select the complete dataset.
+    Go to Insert → PivotTable
+
+    Choose:
+    -------
+        New Worksheet or Existing Worksheet
+        Click OK
+
+Step 2: Add Fields to Pivot Table
+------
+In the PivotTable Fields panel:
+-------------------------------
+Drag Fields
+
+| Area   | Field           |
+| ------ | --------------- |
+| Rows   | Date of Call    |
+| Values | Call number     |
+
+Step 03: Insert Line Chart
+--------
+Steps
+------
+    1. Click inside Pivot Table
+    2. Go to:
+        Insert → Column Chart
+    3. Select:
+        Line Chart
+
+Step 04 Add Slicer
+------------------
+Pivot Table Fields
+------------------
+Representative --> Insert Slicer
+
+Task 07
+-------
+YTD Sales Analysis(Year To Date)
+--------------------------------
+Step 01
+-------
+Copy & Paste Task 06 Table in a same sheet. 
+
+Step 02
+-------
+Remove | Values | Call number | and Add | Values | Purchase Amount   |
+
+Step 03: Insert 2D Area Chart in a Line Chart
+--------
+Steps
+------
+    1. Click inside Pivot Table
+    2. Go to:
+        Insert → Column Chart
+    3. Select:
+        2D Area Chart
+
+
+Select One Cell and Right Click --> Show Values as --> Running Total
+
+
+
+Step 04
+-------
+Copy & Paste Last created Table in a same sheet. 
+
+Step 05
+-------
+
+Create FY (Financial Year) Column and Add Values Using below Query in your existing Data Table
+
+=IF(MONTH([@[Date of Call]])<=6, YEAR([@[Date of Call]]), YEAR([@[Date of Call]])+1)
+
+Step 06
+-------
+
+Refresh Your Pivote Table - Use Data Ribben
+
+Remove | Rows   | Date of Call, Days(Date of Call) | and Add | Rows | FY   |
+
+Step 07 Insert Column Chart
+---------------------------
+Steps
+------
+    1. Click inside Pivot Table
+    2. Go to:
+        Insert → Column Chart
+    3. Select:
+        Clustered Column

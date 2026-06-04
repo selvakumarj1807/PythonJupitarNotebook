@@ -1,0 +1,26 @@
+Task 10
+-------
+
+Step 1: Select the Data
+-------
+    Select the complete dataset.
+    Go to Insert → PivotTable
+
+    Choose:
+    -------
+        New Worksheet or Existing Worksheet
+        Click OK
+
+Step 2: Add Fields to Pivot Table
+------
+In the PivotTable Fields panel:
+-------------------------------
+Drag Fields
+
+| Area   | Field           |
+| ------ | --------------- |
+| Rows   | Representative  | 
+| Values | Call number     |
+| Columns| Months (Date of Call) |
+
+Select One Cell and Home Ribben and select Conditional Formatting --> Data Bars --> Solid Fill

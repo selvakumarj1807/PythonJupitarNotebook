@@ -1,0 +1,38 @@
+Task 09
+-------
+
+Is there a link between call duration and satisfaction rating?
+--------------------------------------------------------------
+
+Create [Duration Bucket] Column and Add Values Using below Query in your existing Data Table
+
+=IFS([@Duration]<=10,"Under 10 mins", [@Duration]<=30,"10 to 30 mins", [@Duration]<=60, "30 to 60 mins",[@Duration]<=120,"1 to 2 hours", TRUE,"More than 2 hours")
+
+Create [Rating rounded] Column and Add Values Using below Query in your existing Data Table
+
+=ROUND([@[Satisfaction Rating]],0)
+
+Step 1: Select the Data
+-------
+    Select the complete dataset.
+    Go to Insert → PivotTable
+
+    Choose:
+    -------
+        New Worksheet or Existing Worksheet
+        Click OK
+
+Step 2: Add Fields to Pivot Table
+------
+In the PivotTable Fields panel:
+-------------------------------
+Drag Fields
+
+| Area   | Field           |
+| ------ | --------------- |
+| Rows   | Duration Bucket |
+| Values | Call number     |
+| Columns | Rating rounded |
+
+
+Select One Cell and Home Ribben and select Conditional Formatting --> Color Scales

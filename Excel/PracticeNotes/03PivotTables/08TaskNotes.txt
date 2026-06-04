@@ -1,0 +1,35 @@
+Task 08
+-------
+
+Which days of week are the busiest?
+-----------------------------------
+
+Create [Day of Week] Column and Add Values Using below Query in your existing Data Table
+
+=TEXT([@[Date of Call]], "DDDD")
+
+Step 1: Select the Data
+-------
+    Select the complete dataset.
+    Go to Insert → PivotTable
+
+    Choose:
+    -------
+        New Worksheet or Existing Worksheet
+        Click OK
+
+Step 2: Add Fields to Pivot Table
+------
+In the PivotTable Fields panel:
+-------------------------------
+Drag Fields
+
+| Area   | Field           |
+| ------ | --------------- |
+| Rows   | Representative  |
+| Values | Call number     |
+| Columns | Day of Week     |
+
+Select One Cell and Right Click --> Show Values as --> % of Row Total
+
+Select One Cell and Home Ribben and select Conditional Formatting --> Color Scales

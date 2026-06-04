@@ -1,0 +1,34 @@
+Task 05
+-------
+
+Call duration analysis
+----------------------
+
+Step 1: 
+-------
+    Copy & Paste Task 01 & Task 02 Table in a Different sheet. 
+
+
+Step 2: Remove Fields to Pivot Table (Average of Satisfaction Rating from values Field & Customer Id from Rows)
+------
+Noe Add Fields to Pivot Table in the PivotTable Fields panel:
+-------------------------------------------------------------
+Now Drag Fields
+
+| Area   | Field           |
+| ------ | --------------- |
+| Rows   | Duration        |
+| Values | Call Number     |
+
+Select group of Duration Column values and right click and select group. And Apply all Duration Column values.
+
+Now you have 
+
+Drag Fields
+
+| Area   | Field           |
+| ------ | --------------- |
+| Rows   | Duration, Duration2        |
+| Values | Call Number     |
+
+And Remove Duration in Rows

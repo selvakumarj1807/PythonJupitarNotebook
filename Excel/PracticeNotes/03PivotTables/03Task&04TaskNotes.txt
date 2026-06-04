@@ -1,0 +1,71 @@
+Task 03
+-------
+Who are our top 10 customers?
+-----------------------------
+
+Step 1: Select the Data
+-------
+    Select the complete dataset.
+    Go to Insert → PivotTable
+
+    Choose:
+    -------
+        New Worksheet or Existing Worksheet
+        Click OK
+
+Step 2: Add Fields to Pivot Table
+------
+In the PivotTable Fields panel:
+-------------------------------
+Drag Fields
+
+| Area   | Field           |
+| ------ | --------------- |
+| Rows   | Customer ID     |
+| Values | Purchase Amount |
+
+Excel automatically changes:
+----------------------------
+    Purchase Amount → Sum of Purchase Amount
+
+Step 3: Sort Purchase Amount in Descending Order
+-------
+To display highest purchase amount first:
+-----------------------------------------
+    1. Click any value inside Sum of Purchase Amount
+    2. Right Click
+    3. Choose:
+    ----------
+        Sort → Sort Largest to Smallest
+
+    Now customers are sorted in descending order.
+
+Step 4: Apply Top 10 Filter
+-------
+To show only the top 10 customers:
+----------------------------------
+    1. Click the dropdown beside Customer ID
+    2. Select:
+    ----------
+        Value Filters → Top 10
+
+
+Task 04
+-------
+Top 10 customers for a specific representative?
+-----------------------------------------------
+Step 01 Add Slicer
+------------------
+Pivot Table Fields
+------------------
+Representative --> Insert Slicer
+
+Step 02 Insert Column Chart
+---------------------------
+Steps
+------
+    1. Click inside Pivot Table
+    2. Go to:
+        Insert → Column Chart
+    3. Select:
+        Clustered Column
