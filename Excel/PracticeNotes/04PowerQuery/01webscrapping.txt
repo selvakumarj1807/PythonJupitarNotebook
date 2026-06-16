@@ -1,0 +1,9 @@
+https://en.wikipedia.org/wiki/2020_Summer_Olympics_medal_table
+
+Data from Ribben --> from web --> copy paste the given link --> transform
+
+1. 1st row as a column - home ribben --> first row as a column
+2. remove * value from name column - select right click --> find & replace
+3. from rank column null values - transform from ribben --> fill --> down fill
+4. text cloumn to number column
+5. gold / total -> change percentage

@@ -1,0 +1,74 @@
+Power Query
+-----------
+
+Power Query is the same ETL (Extract, Transform, Load) tool available in both Microsoft Excel 
+and Microsoft Power BI. It is used to:
+
+1. Connect to data sources
+2. Clean data
+3. Transform data
+4. Merge and append tables
+5. Remove errors and duplicates
+6. Load data for analysis
+
+Architecture
+------------
+
+                 DATA SOURCES
+      (Excel, SQL, CSV, API, Web, etc.)
+                        │
+                        ▼
+                POWER QUERY
+        (Extract, Transform, Clean)
+                        │
+          ┌─────────────┴─────────────┐
+          ▼                           ▼
+      EXCEL                      POWER BI
+   Worksheet/Table         Data Model/Dataset
+          │                           │
+          ▼                           ▼
+   Pivot Tables                Reports &
+   Charts                      Dashboards
+
+
+Excel Power Query
+-----------------
+Purpose
+-------
+Used mainly for:
+----------------
+    1. Data cleaning
+    2. Data preparation
+    3. Pivot Tables
+    4. Excel reporting
+    5. Ad-hoc analysis
+
+Power BI Power Query
+--------------------
+Purpose
+-------
+Used mainly for:
+----------------
+    1. Business Intelligence
+    2. Dashboard creation
+    3. Enterprise reporting
+    4. Large-scale analytics
+
+Feature Comparison
+------------------
+
+| Feature             | Excel Power Query | Power BI Power Query |
+| ------------------- | ----------------- | -------------------- |
+| Data Cleaning       | ✅                 | ✅                    |
+| Data Transformation | ✅                 | ✅                    |
+| M Language          | ✅                 | ✅                    |
+| Pivot Tables        | ✅                 | ❌                    |
+| Data Modeling       | Limited           | ✅ Advanced           |
+| DAX Support         | Limited           | ✅ Full               |
+| Interactive Reports | ❌                 | ✅                    |
+| Dashboards          | ❌                 | ✅                    |
+| Scheduled Refresh   | Limited           | ✅                    |
+| Large Datasets      | Limited           | ✅                    |
+| Report Sharing      | Limited           | ✅                    |
+
+

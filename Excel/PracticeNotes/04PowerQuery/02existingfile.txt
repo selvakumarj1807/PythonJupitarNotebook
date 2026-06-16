@@ -1,0 +1,6 @@
+
+
+Data from Ribben --> from file --> from excel work book
+
+1. find and replace
+2. add condition column & add custom column from transform ribben.
