@@ -1,1 +1,52 @@
 Intaractive Data Visualization software.
+
+What is Power BI?
+-----------------
+Power BI is Microsoft's Business Intelligence (BI) and Data Analytics platform 
+that enables organizations to:
+
+    1. Connect to multiple data sources
+    2. Transform and clean data
+    3. Build data models
+    4. Create interactive dashboards and reports
+    5. Perform self-service analytics
+    6. Share insights securely across the organization
+
+It converts raw data into actionable business intelligence.
+
+1. Power BI Desktop
+-------------------
+Developer tool used for:
+------------------------
+    1. Data Import
+    2. Power Query transformations
+    3. Data Modeling
+    4. DAX calculations
+    5. Report development
+
+2. Power BI Service (Cloud)
+---------------------------
+Used for:
+---------
+    1. Publishing reports
+    2. Dashboard creation
+    3. Scheduling refresh
+    4. Sharing reports
+    5. Workspace management
+
+Power BI Architecture
+---------------------
+
+Data Sources
+      ↓
+Power Query (ETL)
+      ↓
+Data Model
+      ↓
+DAX Calculations
+      ↓
+Reports & Visualizations
+      ↓
+Power BI Service
+      ↓
+Dashboards / Users

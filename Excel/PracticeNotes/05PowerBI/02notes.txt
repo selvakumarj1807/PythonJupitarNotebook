@@ -1,0 +1,43 @@
+Step 01:
+--------
+select clustered column chart.
+------------------------------
+Drag & Drop
+-----------
+
+x axis - Join Of Date column from Student Course Details Table
+y axis - Course column from Student Course Details Table
+
+Select Month using Go to the next level in hierarchy
+
+Select Format Visual --> y axis --> Remove Value, Title
+
+Select Format Visual --> y axis --> select Data Lebels & change the font style using value from the Data Lebels
+
+Step 02:
+--------
+select donut chart
+------------------
+Drag & Drop
+-----------
+
+legend - Age
+values - Course
+
+Click Age drop down option from legend --> New Group --> change Name (Age Group) --> Select bin to List from Group Type -->
+
+Ungroup Value to Groups & Members --> Below 20, 20 to 29, 30 to 39, 40 Above --> Click Ok
+
+Update Format Visual vaules
+
+Step 03:
+--------
+Select clustered bar chart
+--------------------------
+
+Y axis - Course
+X axis - Fees
+
+Use Format Painter.
+
+Format Visuals --> Data Lebels --> value --> Data Unit --> select Thousands

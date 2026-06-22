@@ -1,0 +1,49 @@
+Step 01:
+--------
+
+Download & Install Power BI Desktop App
+
+Step 02:
+--------
+
+Click Get Data from Home Ribben --> Select Folder & Connect --> Choose Folder(3 files) Path --> Combine & Transform Data --> Combine files click Ok
+
+Step 03:
+--------
+Now Power Query Editer will be Open
+-----------------------------------
+
+Remove Columns - Source.Name, Column 1, 3, 4
+
+Split Column 2:
+---------------
+
+select Column 2 --> select split Column from home ribben --> select Non digit to digit from split Column
+
+select & right Click Column 2 --> click transform --> select capitalize each word
+
+Split Column 7:
+---------------
+
+select & right click Column 7 --> select split Column --> select by delimiter --> select space & click Ok
+
+Remove Column - Column 7.1(Rs Column)
+
+Step 04:
+--------
+Change Column Name
+------------------
+
+Student Name - Age - Course - Join Of Date - Fees
+
+Step 05:
+--------
+
+Close & Apply from Home Ribben
+
+Step 06:
+--------
+
+Click Get Data from Home Ribben --> select Excel Workbook --> transform --> No Changes click Close & Apply 
+
+
