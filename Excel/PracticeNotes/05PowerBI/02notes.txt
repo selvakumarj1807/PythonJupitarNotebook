@@ -41,3 +41,45 @@ X axis - Fees
 Use Format Painter.
 
 Format Visuals --> Data Lebels --> value --> Data Unit --> select Thousands
+
+Step 04:
+--------
+Select Card from Build Visuals
+------------------------------
+
+Value - Fees
+
+Change Value Fees to TOTAL AMOUNT
+
+Format Visuals --> callout --> Apply Settings to Cards --> select TOTAL AMOUNT --> Values --> Display Units --> Select Thousands
+
+Format Visuals --> Cards --> Select Accent bar
+
+Step 05:
+--------
+Select Card from Build Visuals
+------------------------------
+
+Value - Student Name & select Distinct count from drop down
+
+Change Value Student Name to TOTAL STUDENT
+
+Format Visuals --> callout --> Apply Settings to Cards --> select TOTAL AMOUNT --> Values --> Display Units --> Select Thousands
+
+Format Visuals --> Cards --> Select Accent bar
+
+Step 06:
+--------
+Select Gauge from Build Visuals
+-------------------------------
+
+select Personal Details table --> Select Table Tools from home ribben --> Click New Messure & write below Query
+
+CountYes = CALCULATE(COUNTROWS('Personal Details'),'Personal Details'[Issued Certificate]="Yes")
+
+Value - CountYes
+
+Step 07:
+--------
+Select Slicer from Build Visuals for year, city, course
+-------------------------------------------------------
